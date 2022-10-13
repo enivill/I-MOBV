@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">AndroidProjectSchool</string>
     <string name="button_text">One beer please!</string>
+
+<!--    Form Fragment-->
+    <string name="form_name">Meno</string>
+    <string name="form_business_name">Názov podniku</string>
+    <string name="form_latitude">Zem. šírku podniku</string>
+    <string name="form_longitude">Zem. dĺžku podniku</string>
+    <string name="form_title">Zadajte údaje</string>
+    <string name="form_button">Potvrdiť</string>
+
+<!--    Business Fragment-->
+    <string name="business_name">moje meno</string>
+    <string name="business_business">podnik</string>
+    <string name="business_button">Ukáž na mape</string>
 </resources>
