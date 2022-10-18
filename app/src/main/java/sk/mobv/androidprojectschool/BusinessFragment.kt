@@ -47,7 +47,8 @@ class BusinessFragment : Fragment() {
 //        val businessName = args.businessName
 //        nameTv.text = name.toString()
 //        businessNameTv.text = businessName.toString()
+
+        // start animation
+        binding.animationView.playAnimation()
     }
-
-
 }
