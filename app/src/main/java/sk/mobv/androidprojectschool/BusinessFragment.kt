@@ -1,15 +1,14 @@
 package sk.mobv.androidprojectschool
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.navigation.NavArgs
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import sk.mobv.androidprojectschool.databinding.FragmentBusinessBinding
-import sk.mobv.androidprojectschool.databinding.FragmentFormBinding
 
 /**
  * A simple [Fragment] subclass.
@@ -28,6 +27,17 @@ class BusinessFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         _binding = FragmentBusinessBinding.inflate(inflater, container, false)
+
+        binding.frBusinessBtMap.setOnClickListener {
+            val latitude = args.latitude
+            val longitude = args.longitude
+            val location: Uri = Uri.parse("geo:${latitude},${longitude}?z=14&q=${latitude},${longitude}") // z - zoom level, q - marker
+            val mapIntent = Intent(
+                Intent.ACTION_VIEW,
+                location
+            )
+            startActivity(mapIntent)
+        }
 
         return binding.root
     }
