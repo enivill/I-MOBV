@@ -5,34 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.navigation.findNavController
 import sk.mobv.androidprojectschool.databinding.FragmentFormBinding
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [FormFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
-class FormFragment : Fragment(){
-
-
+class FormFragment : Fragment() {
     private var _binding: FragmentFormBinding? = null
     private val binding get() = _binding!!
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         _binding = FragmentFormBinding.inflate(inflater, container, false)
 
@@ -41,9 +26,35 @@ class FormFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnFormSubmit.setOnClickListener {
-            val action = FormFragmentDirections.actionFormFragmentToBusinessFragment()
+
+        // with BINDING
+        binding.frFormBtSubmit.setOnClickListener {
+            val action = FormFragmentDirections.actionFormFragmentToBusinessFragment(
+                name = binding.frFormEtName.text.toString(),
+                businessName = binding.frFormEtBusinessName.text.toString(),
+                latitude = binding.frFormEtLatitude.text.toString(),
+                longitude = binding.frFormEtLongitude.text.toString()
+            )
             view.findNavController().navigate(action)
+
+            //Without BINDING
+//            val nameEt: EditText = requireView().findViewById(R.id.fr_form_et_name)
+//            val businessNameEt: EditText = requireView().findViewById(R.id.fr_form_et_business_name)
+//            val latitudeEt: EditText = requireView().findViewById(R.id.fr_form_et_latitude)
+//            val longitudeEt: EditText = requireView().findViewById(R.id.fr_form_et_longitude)
+//
+//            val name = nameEt.text.toString()
+//            val businessName = businessNameEt.text.toString()
+//            val latitude = latitudeEt.text.toString()
+//            val longitude = longitudeEt.text.toString()
+//
+//            val action = FormFragmentDirections.actionFormFragmentToBusinessFragment(
+//                name,
+//                businessName,
+//                latitude,
+//                longitude
+//            )
+//            view.findNavController().navigate(action)
         }
     }
 }

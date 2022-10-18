@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="edit_text">12dp</dimen>
+    <dimen name="fragment_padding">16dp</dimen>
+    <dimen name="text_top_margin">20dp</dimen>
 </resources>

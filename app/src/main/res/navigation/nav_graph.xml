@@ -18,5 +18,18 @@
         android:id="@+id/businessFragment"
         android:name="sk.mobv.androidprojectschool.BusinessFragment"
         android:label="fragment_business"
-        tools:layout="@layout/fragment_business" />
+        tools:layout="@layout/fragment_business" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+        <argument
+            android:name="business_name"
+            app:argType="string" />
+        <argument
+            android:name="latitude"
+            app:argType="string" />
+        <argument
+            android:name="longitude"
+            app:argType="string" />
+    </fragment>
 </navigation>

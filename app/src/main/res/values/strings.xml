@@ -11,7 +11,9 @@
     <string name="form_button">Potvrdiť</string>
 
 <!--    Business Fragment-->
-    <string name="business_name">moje meno</string>
-    <string name="business_business">podnik</string>
+    <string name="business_name">{name}</string>
+    <string name="business_business_name">{business_name}</string>
     <string name="business_button">Ukáž na mape</string>
+
+
 </resources>
