@@ -5,12 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="@dimen/fragment_padding"
-    tools:context=".BusinessFragment">
+    tools:context=".FormSummaryFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
     <TextView
-        android:id="@+id/fr_business_tv_name"
+        android:id="@+id/fr_form_summary_tv_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -19,17 +19,17 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/fr_business_tv_business_name"
+        android:id="@+id/fr_form_summary_tv_business_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/text_top_margin"
         android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fr_business_tv_name" />
+        app:layout_constraintTop_toBottomOf="@+id/fr_form_summary_tv_name" />
 
     <Button
-        android:id="@+id/fr_business_bt_map"
+        android:id="@+id/fr_form_summary_bt_map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
@@ -48,7 +48,7 @@
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fr_business_tv_business_name"
+        app:layout_constraintTop_toBottomOf="@+id/fr_form_summary_tv_business_name"
         app:layout_constraintVertical_bias="0.4"
         app:lottie_loop="false"
         app:lottie_rawRes="@raw/beer_refill"

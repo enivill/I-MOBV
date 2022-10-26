@@ -51,5 +51,7 @@ dependencies {
     implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
     androidTestImplementation 'androidx.navigation:navigation-testing:2.5.2'
+    //GSON
+    implementation 'com.google.code.gson:gson:2.8.5'
 
 }

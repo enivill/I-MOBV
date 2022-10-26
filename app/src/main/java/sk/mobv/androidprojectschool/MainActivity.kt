@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.airbnb.lottie.LottieAnimationView
 import sk.mobv.androidprojectschool.databinding.ActivityMainBinding
@@ -14,18 +15,7 @@ import sk.mobv.androidprojectschool.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
-    // WITH BINDING
 
-    //    lateinit var binding: ActivityMainBinding
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        binding = ActivityMainBinding.inflate(layoutInflater)
-//        setContentView(binding.root)
-//
-//        binding.button.setOnClickListener {
-//            binding.animationView.playAnimation()
-//        }
-//    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 

@@ -2,7 +2,7 @@
     <string name="app_name">AndroidProjectSchool</string>
     <string name="button_text">One beer please!</string>
 
-<!--    Form Fragment-->
+    <!--    Form Fragment-->
     <string name="form_name">Meno</string>
     <string name="form_business_name">Názov podniku</string>
     <string name="form_latitude">Zem. šírku podniku</string>
@@ -10,10 +10,13 @@
     <string name="form_title">Zadajte údaje</string>
     <string name="form_button">Potvrdiť</string>
 
-<!--    Business Fragment-->
+    <!--    Business Fragment-->
     <string name="business_name">{name}</string>
     <string name="business_business_name">{business_name}</string>
     <string name="business_button">Ukáž na mape</string>
-
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="list_button">Add new business</string>
+    <string name="delete_button">Vymaž podnik</string>
 
 </resources>

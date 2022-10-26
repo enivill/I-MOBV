@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/formFragment">
+    app:startDestination="@id/businessListFragment">
 
     <fragment
         android:id="@+id/formFragment"
@@ -16,9 +16,9 @@
     </fragment>
     <fragment
         android:id="@+id/businessFragment"
-        android:name="sk.mobv.androidprojectschool.BusinessFragment"
+        android:name="sk.mobv.androidprojectschool.FormSummaryFragment"
         android:label="fragment_business"
-        tools:layout="@layout/fragment_business" >
+        tools:layout="@layout/fragment_form_summary" >
         <argument
             android:name="name"
             app:argType="string" />
@@ -31,5 +31,32 @@
         <argument
             android:name="longitude"
             app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessListFragment"
+        android:name="sk.mobv.androidprojectschool.BusinessListFragment"
+        android:label="fragment_business_list"
+        tools:layout="@layout/fragment_business_list" >
+        <action
+            android:id="@+id/action_businessListFragment_to_formFragment"
+            app:destination="@id/formFragment" />
+        <action
+            android:id="@+id/action_businessListFragment_to_businessDetailFragment"
+            app:destination="@id/businessDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/businessDetailFragment"
+        android:name="sk.mobv.androidprojectschool.BusinessDetailFragment"
+        android:label="fragment_business_detail"
+        tools:layout="@layout/fragment_business_detail" >
+        <argument android:name="name" />
+        <argument android:name="latitude" />
+        <argument android:name="longitude" />
+        <argument android:name="website" />
+        <argument android:name="id"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_businessDetailFragment_to_businessListFragment"
+            app:destination="@id/businessListFragment" />
     </fragment>
 </navigation>
