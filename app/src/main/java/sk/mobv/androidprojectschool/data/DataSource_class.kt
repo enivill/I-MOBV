@@ -5,21 +5,19 @@ import android.util.Log
 import org.json.JSONException
 import org.json.JSONObject
 import sk.mobv.androidprojectschool.R
-import sk.mobv.androidprojectschool.data.DataSource.businesses
 import sk.mobv.androidprojectschool.model.Business
 import java.io.IOException
 
-object DataSource {
+class DataSource_class {
 
-    var businesses: MutableList<Business> = mutableListOf<Business>()
-
-    fun loadBusinesses(context: Context) {
-
+    fun loadBusinesses(context: Context): MutableList<Business> {
+        val businesses: MutableList<Business> = mutableListOf<Business>()
         // As we have JSON object, so we are getting the object
         //Here we are calling a Method which is returning the JSON object
         val obj = JSONObject(getJsonDataFromFile(context)!!)
         // fetch JSONArray named elements by using getJSONArray
         val elementsArray = obj.getJSONArray("elements")
+
 
         // Get the users data using for loop i.e. id, name, email and so on
         for (i in 0 until elementsArray.length()) {
@@ -42,6 +40,7 @@ object DataSource {
             // add the details in the list
             businesses.add(business)
         }
+        return businesses
     }
 
     private fun getValue(obj: JSONObject, tagName: String): String {

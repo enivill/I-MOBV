@@ -43,13 +43,17 @@ class BusinessDetailFragment : Fragment() {
             startActivity(mapIntent)
         }
 
+        binding.frBusinessDetailBtWebsite.setOnClickListener {
+            val website = args.website
+            val webIntent = Intent(Intent.ACTION_VIEW, Uri.parse(website));
+            startActivity(webIntent)
+        }
+
         binding.frBusinessDetailBtDelete.setOnClickListener{
             DataSource.businesses.remove(DataSource.businesses.find { e -> e.id == args.id })
-
             val action = BusinessDetailFragmentDirections.actionBusinessDetailFragmentToBusinessListFragment()
             binding.root.findNavController().navigate(action)
         }
-
         return binding.root
     }
 
@@ -62,6 +66,10 @@ class BusinessDetailFragment : Fragment() {
         binding.frBusinessDetailName.text = name.toString()
         binding.frBusinessDetailLatitude.text = latitude.toString()
         binding.frBusinessDetailLongitude.text = longitude.toString()
-        binding.frBusinessDetailWebsite.text = website.toString()
+
+        if(website==""){
+            binding.frBusinessDetailBtWebsite.visibility = View.GONE
+        }
+
     }
 }

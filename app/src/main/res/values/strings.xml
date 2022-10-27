@@ -14,9 +14,12 @@
     <string name="business_name">{name}</string>
     <string name="business_business_name">{business_name}</string>
     <string name="business_button">Ukáž na mape</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--    Business Detail Fragment-->
     <string name="list_button">Add new business</string>
     <string name="delete_button">Vymaž podnik</string>
+    <string name="website_button">Website</string>
 
+    <!--    MENU -->
+    <string name="action_sort">Sort</string>
 </resources>

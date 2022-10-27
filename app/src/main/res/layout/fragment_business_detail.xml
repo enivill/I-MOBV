@@ -37,15 +37,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fr_business_detail_latitude" />
 
-    <TextView
-        android:id="@+id/fr_business_detail_website"
+    <Button
+        android:id="@+id/fr_business_detail_bt_website"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:text="TextView"
+        android:layout_margin="30dp"
+        android:text="@string/website_button"
+        app:layout_constraintBottom_toTopOf="@+id/fr_business_detail_bt_delete"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fr_business_detail_longitude" />
+        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/fr_business_detail_bt_map"
