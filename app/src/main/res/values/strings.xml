@@ -22,4 +22,47 @@
 
     <!--    MENU -->
     <string name="action_sort">Sort</string>
+
+
+    <string name="pour_out">Pour Out</string>
+    <string name="add">Add</string>
+    <string name="remove">Remove</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="enter_the_data">Zadajte údaje</string>
+    <string name="enter_owner_name">Zadajte meno majiteľa</string>
+    <string name="enter_business_name">Zadajte názov podniku</string>
+    <string name="enter_latitude">Zadajte zem. šírku podniku</string>
+    <string name="enter_longitude">Zadajte zem. dĺžku podniku</string>
+    <string name="add_business">Pridať podnik</string>
+    <string name="edit_business">Upraviť podnik</string>
+    <string name="business_owner_label">Podnik vlastníka {owner_name}</string>
+    <string name="show_on_map">Zobraziť na mape</string>
+    <string name="call">Zavolať</string>
+    <string name="enter_phone_number">Zadajte telefónne číslo</string>
+    <string name="your_business">Váš podnik</string>
+    <string name="business_list">Zoznam podnikov</string>
+    <string name="enter_web_url">Zadajte url web stránky podniku</string>
+    <string name="save">Uložiť</string>
+    <string name="delete">Vymazať</string>
+    <string name="business_without_name">Chýbajúce meno podniku</string>
+    <string name="business_without_owner">Chýbajúce meno majiteľa</string>
+    <string name="action_sort_business_list">Zoradiť zoznam podnikov</string>
+    <string name="latitude">Zem. šírka</string>
+    <string name="longitude">Zem. dĺžka</string>
+    <string name="is_required">Je potrebné zadať parametre %s</string>
+    <string name="succesfully_added">Podnik bol úspešne pridaný.</string>
+    <string name="succesfully_updated">Podnik bol úspešne upravený.</string>
+    <string name="network_error">Problém s internetom.</string>
+    <string name="delete_question">Ste si istý, že chcete vymazať podnik %s majiteľa %s?</string>
+    <string name="dialog_alert_title">Upozornenie!</string>
+    <string name="yes">Áno</string>
+    <string name="no">Nie</string>
+    <string name="invalid_url">Neplatná webová adresa</string>
+
+    <string-array name='business_types'>
+        <item>bar</item>
+        <item>pub</item>
+        <item>nightclub</item>
+    </string-array>
 </resources>

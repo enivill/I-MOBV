@@ -2,29 +2,18 @@ package sk.mobv.androidprojectschool
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.ui.NavigationUI.setupActionBarWithNavController
 import androidx.navigation.ui.setupActionBarWithNavController
-import com.airbnb.lottie.LottieAnimationView
-import sk.mobv.androidprojectschool.data.DataSource
-import sk.mobv.androidprojectschool.databinding.ActivityMainBinding
 
-//for binding
-//import sk.mobv.animation.databinding.ActivityMainBinding
+
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
-
+        
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
-        val binding = ActivityMainBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-
-        DataSource.loadBusinesses(applicationContext)
+        setContentView(R.layout.activity_main)
 
         val navHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment
@@ -36,8 +25,12 @@ class MainActivity : AppCompatActivity() {
         return navController.navigateUp() || super.onSupportNavigateUp()
     }
 
-    override fun onDestroy() {
-        super.onDestroy()
-        DataSource.businesses = mutableListOf()
-    }
 }
+
+//ui
+// - fragments
+// - - bardetail, bars, locate, login, sign up
+// - viewmodels
+// - widgets
+//workers
+// - checkout workers

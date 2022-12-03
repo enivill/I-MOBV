@@ -7,34 +7,23 @@
 
     <fragment
         android:id="@+id/formFragment"
-        android:name="sk.mobv.androidprojectschool.FormFragment"
+        android:name="sk.mobv.androidprojectschool.ui.FormFragment"
         android:label="fragment_form"
         tools:layout="@layout/fragment_form" >
         <action
-            android:id="@+id/action_formFragment_to_businessFragment"
-            app:destination="@id/businessFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/businessFragment"
-        android:name="sk.mobv.androidprojectschool.FormSummaryFragment"
-        android:label="fragment_business"
-        tools:layout="@layout/fragment_form_summary" >
+            android:id="@+id/action_formFragment_to_businessDetailFragment"
+            app:destination="@id/businessDetailFragment" />
+        <action
+            android:id="@+id/action_formFragment_to_businessListFragment"
+            app:destination="@id/businessListFragment" />
         <argument
-            android:name="name"
-            app:argType="string" />
-        <argument
-            android:name="business_name"
-            app:argType="string" />
-        <argument
-            android:name="latitude"
-            app:argType="string" />
-        <argument
-            android:name="longitude"
-            app:argType="string" />
+            android:name="business_id"
+            app:argType="long"
+            android:defaultValue="-1L" />
     </fragment>
     <fragment
         android:id="@+id/businessListFragment"
-        android:name="sk.mobv.androidprojectschool.BusinessListFragment"
+        android:name="sk.mobv.androidprojectschool.ui.BusinessListFragment"
         android:label="fragment_business_list"
         tools:layout="@layout/fragment_business_list" >
         <action
@@ -46,17 +35,19 @@
     </fragment>
     <fragment
         android:id="@+id/businessDetailFragment"
-        android:name="sk.mobv.androidprojectschool.BusinessDetailFragment"
+        android:name="sk.mobv.androidprojectschool.ui.BusinessDetailFragment"
         android:label="fragment_business_detail"
         tools:layout="@layout/fragment_business_detail" >
-        <argument android:name="name" />
-        <argument android:name="latitude" />
-        <argument android:name="longitude" />
-        <argument android:name="website" />
-        <argument android:name="id"
-            app:argType="long" />
         <action
-            android:id="@+id/action_businessDetailFragment_to_businessListFragment"
-            app:destination="@id/businessListFragment" />
+            android:id="@+id/action_businessDetailFragment_to_formFragment"
+            app:destination="@id/formFragment" />
+        <argument
+            android:name="business_id"
+            app:argType="long"
+            android:defaultValue="-1L" />
+        <argument
+            android:name="owner_name"
+            app:argType="string"
+            app:nullable="true" />
     </fragment>
 </navigation>
