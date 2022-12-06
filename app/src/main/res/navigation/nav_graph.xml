@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph.xml"
-    app:startDestination="@id/businessListFragment">
+    app:startDestination="@id/businessesFragment">
 
     <fragment
         android:id="@+id/formFragment"
@@ -50,4 +50,8 @@
             app:argType="string"
             app:nullable="true" />
     </fragment>
+    <fragment
+        android:id="@+id/businessesFragment"
+        android:name="sk.mobv.androidprojectschool.ui.BusinessesFragment"
+        android:label="BusinessesFragment" />
 </navigation>

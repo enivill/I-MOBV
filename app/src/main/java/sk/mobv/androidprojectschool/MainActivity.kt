@@ -27,10 +27,4 @@ class MainActivity : AppCompatActivity() {
 
 }
 
-//ui
-// - fragments
-// - - bardetail, bars, locate, login, sign up
-// - viewmodels
-// - widgets
-//workers
-// - checkout workers
+

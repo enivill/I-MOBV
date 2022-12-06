@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="business"
+            type="sk.mobv.androidprojectschool.domain.Business" />
+        <variable
+            name="businessEventListener"
+            type="sk.mobv.androidprojectschool.ui.BusinessEventListener" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/business_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="?attr/selectableItemBackground"
+        android:onClick="@{() -> businessEventListener.onClick(business.ownerName, business.id)}">
+
+        <ImageView
+            android:id="@+id/business_type_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/ic_pub" />
+<!--        android:contentDescription="@{business.type}"-->
+<!--        app:businessType="@{business.type}"-->
+
+        <TextView
+            android:id="@+id/business_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:maxLines="1"
+            android:text="@{business.name ?? @string/business_without_name}"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            android:textColor="@color/mtrl_list_item_tint"
+            app:layout_constraintStart_toEndOf="@id/business_type_icon"
+            app:layout_constraintTop_toTopOf="@id/business_item"
+            tools:text="@tools:sample/lorem" />
+
+        <TextView
+            android:id="@+id/count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            app:layout_constraintEnd_toEndOf="@id/business_item"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="3" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

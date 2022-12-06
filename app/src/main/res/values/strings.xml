@@ -65,4 +65,12 @@
         <item>pub</item>
         <item>nightclub</item>
     </string-array>
+
+    <!-- BOTTOM MENU -->
+    <string name="menu_bars">"Bars"</string>
+    <string name="menu_friends">"Friends"</string>
+    <string name="menu_add_location">"Add location"</string>
+
+
+
 </resources>
